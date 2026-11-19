@@ -1,0 +1,10 @@
+Issue,Rows affected,Action
+Dates stored as text (M/D/YYYY),9994,Converted Order Date and Ship Date to real dates
+Postal codes lost their leading zero (e.g. 2108 instead of 02108),449,Stored as 5-character text
+"Exact duplicate order line (same order, product, amounts)",1,Removed the second copy
+Product IDs used for more than one product name,337,"Kept; flagged. 32 IDs affected. Reports use Sub-Category, not product ID"
+Ship date before order date,0,None found
+Missing values in any column,0,None found
+Sales of zero or less,0,None found
+Discount outside 0–80%,0,None found
+Customer names (personal data),9993,Dropped from the workbook; Customer ID is enough for analysis

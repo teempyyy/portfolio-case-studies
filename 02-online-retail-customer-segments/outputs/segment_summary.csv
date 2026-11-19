@@ -1,0 +1,11 @@
+Segment,Customers,Revenue,AvgRecencyDays,AvgOrders,AvgSpend,CustomerShare,RevenueShare,Suggested action
+Champions,618,4102707.14,5.2799,12.0065,6638.6847,0.145,0.4867,Reward them; ask for reviews and referrals; first look at new products
+Loyal,802,2197858.47,31.409,6.303,2740.4719,0.1882,0.2608,Upsell bundles and higher-value items; loyalty pricing
+Potential loyalists,470,477383.85,15.9872,1.9489,1015.7103,0.1103,0.0566,Membership or volume-discount offer to lock in a second habit
+New,44,15336.76,6.2045,1.0,348.5627,0.0103,0.0018,Welcome series; make the second order easy
+Promising,94,27204.15,21.6915,1.0,289.4059,0.0221,0.0032,Show best sellers; small time-limited offer
+Need attention,188,156489.43,49.2128,2.2819,832.3906,0.0441,0.0186,Personal check-in; recommend based on what they bought
+About to sleep,340,154663.49,50.6265,1.1235,454.8926,0.0798,0.0183,Reminder with popular items before they lapse
+At risk,595,636190.57,143.6622,2.8605,1069.2278,0.1396,0.0755,Win-back email with a reason to return; ask what changed
+Can't lose,57,158482.34,125.0175,7.7895,2780.3919,0.0134,0.0188,"Call or email personally; these were big, frequent buyers"
+Hibernating,1053,502609.32,204.5375,1.0845,477.3118,0.2471,0.0596,Low-cost reactivation only; don't spend much here

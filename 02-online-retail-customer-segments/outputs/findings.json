@@ -1,0 +1,172 @@
+{
+  "period": "01 Dec 2009 \u2013 09 Dec 2011",
+  "currency": "GBP",
+  "raw_rows": 1067371,
+  "clean_sales_lines": 1003340,
+  "revenue_total": 19643861.62,
+  "revenue_no_customer_id_share": 0.1311,
+  "customers_total": 5852,
+  "countries": 43,
+  "uk_revenue_share": 0.8553,
+  "cancellation_lines": 19104,
+  "cancellation_product_lines": 17914,
+  "cancellation_value_products": 716425.97,
+  "cancellation_share_of_product_sales": 0.0365,
+  "rfm_window": "10 Dec 2010 \u2013 09 Dec 2011",
+  "rfm_customers": 4261,
+  "rfm_revenue": 8428925.52,
+  "top20pct_customers_revenue_share": 0.7442,
+  "one_order_customers_share": 0.3553,
+  "segments": {
+    "Champions": {
+      "Customers": 618,
+      "Revenue": 4102707.14,
+      "CustomerShare": 0.145,
+      "RevenueShare": 0.4867,
+      "AvgRecencyDays": 5.2799,
+      "AvgOrders": 12.0065,
+      "AvgSpend": 6638.6847
+    },
+    "Loyal": {
+      "Customers": 802,
+      "Revenue": 2197858.47,
+      "CustomerShare": 0.1882,
+      "RevenueShare": 0.2608,
+      "AvgRecencyDays": 31.409,
+      "AvgOrders": 6.303,
+      "AvgSpend": 2740.4719
+    },
+    "Potential loyalists": {
+      "Customers": 470,
+      "Revenue": 477383.85,
+      "CustomerShare": 0.1103,
+      "RevenueShare": 0.0566,
+      "AvgRecencyDays": 15.9872,
+      "AvgOrders": 1.9489,
+      "AvgSpend": 1015.7103
+    },
+    "New": {
+      "Customers": 44,
+      "Revenue": 15336.76,
+      "CustomerShare": 0.0103,
+      "RevenueShare": 0.0018,
+      "AvgRecencyDays": 6.2045,
+      "AvgOrders": 1.0,
+      "AvgSpend": 348.5627
+    },
+    "Promising": {
+      "Customers": 94,
+      "Revenue": 27204.15,
+      "CustomerShare": 0.0221,
+      "RevenueShare": 0.0032,
+      "AvgRecencyDays": 21.6915,
+      "AvgOrders": 1.0,
+      "AvgSpend": 289.4059
+    },
+    "Need attention": {
+      "Customers": 188,
+      "Revenue": 156489.43,
+      "CustomerShare": 0.0441,
+      "RevenueShare": 0.0186,
+      "AvgRecencyDays": 49.2128,
+      "AvgOrders": 2.2819,
+      "AvgSpend": 832.3906
+    },
+    "About to sleep": {
+      "Customers": 340,
+      "Revenue": 154663.49,
+      "CustomerShare": 0.0798,
+      "RevenueShare": 0.0183,
+      "AvgRecencyDays": 50.6265,
+      "AvgOrders": 1.1235,
+      "AvgSpend": 454.8926
+    },
+    "At risk": {
+      "Customers": 595,
+      "Revenue": 636190.57,
+      "CustomerShare": 0.1396,
+      "RevenueShare": 0.0755,
+      "AvgRecencyDays": 143.6622,
+      "AvgOrders": 2.8605,
+      "AvgSpend": 1069.2278
+    },
+    "Can't lose": {
+      "Customers": 57,
+      "Revenue": 158482.34,
+      "CustomerShare": 0.0134,
+      "RevenueShare": 0.0188,
+      "AvgRecencyDays": 125.0175,
+      "AvgOrders": 7.7895,
+      "AvgSpend": 2780.3919
+    },
+    "Hibernating": {
+      "Customers": 1053,
+      "Revenue": 502609.32,
+      "CustomerShare": 0.2471,
+      "RevenueShare": 0.0596,
+      "AvgRecencyDays": 204.5375,
+      "AvgOrders": 1.0845,
+      "AvgSpend": 477.3118
+    }
+  },
+  "new_cohorts": "2010-01 \u2013 2011-11",
+  "month1_retention_median_new": 0.2021,
+  "month1_retention_range_new": [
+    0.0921,
+    0.3167
+  ],
+  "month3_retention_median_new": 0.1996,
+  "month12_retention_median_new": 0.1529,
+  "month12_cohorts_counted": 11,
+  "existing_customers_dec2009": 951,
+  "existing_customers_dec2009_month12": 0.3764,
+  "median_new_customers_per_month": 188,
+  "peak_month_revenue": "2011-11",
+  "data_quality": [
+    {
+      "Issue": "Rows in the raw file",
+      "Rows affected": 1067371,
+      "Action": "Starting point"
+    },
+    {
+      "Issue": "Exact duplicate rows",
+      "Rows affected": 34335,
+      "Action": "Removed"
+    },
+    {
+      "Issue": "Bad-debt adjustment invoices (start with A)",
+      "Rows affected": 6,
+      "Action": "Removed: accounting entries, not sales"
+    },
+    {
+      "Issue": "Cancellation lines (invoice starts with C)",
+      "Rows affected": 19104,
+      "Action": "Kept aside: reported as cancellations, not counted as sales"
+    },
+    {
+      "Issue": "Non-cancelled lines with quantity or price of zero or less",
+      "Rows affected": 6014,
+      "Action": "Removed: stock write-offs and free lines"
+    },
+    {
+      "Issue": "Postage, fees, manual and test lines (non-product stock codes)",
+      "Rows affected": 4572,
+      "Action": "Removed from product sales: POST, DOT, M, C2, BANK CHARGES, AMAZONFEE, gift vouchers and similar"
+    },
+    {
+      "Issue": "Sales lines with no customer ID",
+      "Rows affected": 226761,
+      "Action": "Kept in total sales (13.1% of revenue); left out of customer analysis"
+    },
+    {
+      "Issue": "Customer IDs stored as decimals (13085.0)",
+      "Rows affected": 776579,
+      "Action": "Converted to whole numbers"
+    },
+    {
+      "Issue": "Clean sales lines",
+      "Rows affected": 1003340,
+      "Action": "Used for the analysis"
+    }
+  ]
+}

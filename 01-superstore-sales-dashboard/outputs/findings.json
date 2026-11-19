@@ -1,0 +1,106 @@
+{
+  "period": "Jan 2014 \u2013 Dec 2017",
+  "order_lines": 9993,
+  "orders": 5009,
+  "customers": 793,
+  "sales": 2296919.49,
+  "profit": 286409.08,
+  "margin": 0.1247,
+  "sales_growth_2014_2017": 0.515,
+  "aov_2014": 499.45,
+  "aov_2017": 434.63,
+  "deep_discount_lines": 1392,
+  "deep_discount_line_share": 0.1393,
+  "deep_discount_sales": 362488.78,
+  "deep_discount_profit": -135364.0,
+  "profit_without_deep_discount_lines": 421773.08,
+  "margin_by_band": {
+    "0%": 0.2951,
+    "1\u201320%": 0.1191,
+    "21\u201330%": -0.1006,
+    "31\u201350%": -0.248,
+    "Over 50%": -1.192
+  },
+  "category_margin": {
+    "Furniture": 0.0249,
+    "Office Supplies": 0.1704,
+    "Technology": 0.174
+  },
+  "category_avg_discount": {
+    "Furniture": 0.1739,
+    "Office Supplies": 0.1573,
+    "Technology": 0.1323
+  },
+  "region_margin": {
+    "Central": 0.0792,
+    "East": 0.1349,
+    "South": 0.1193,
+    "West": 0.1494
+  },
+  "region_avg_discount": {
+    "Central": 0.2404,
+    "East": 0.1453,
+    "South": 0.1473,
+    "West": 0.1093
+  },
+  "loss_subcategories": {
+    "Bookcases": -3472.56,
+    "Supplies": -1189.1,
+    "Tables": -17725.48
+  },
+  "loss_states_top5": {
+    "Texas": -25729.36,
+    "Ohio": -16959.32,
+    "Pennsylvania": -15559.96,
+    "Illinois": -12607.89,
+    "North Carolina": -7490.91
+  },
+  "sep_nov_dec_share": 0.429,
+  "data_quality": [
+    {
+      "Issue": "Dates stored as text (M/D/YYYY)",
+      "Rows affected": 9994,
+      "Action": "Converted Order Date and Ship Date to real dates"
+    },
+    {
+      "Issue": "Postal codes lost their leading zero (e.g. 2108 instead of 02108)",
+      "Rows affected": 449,
+      "Action": "Stored as 5-character text"
+    },
+    {
+      "Issue": "Exact duplicate order line (same order, product, amounts)",
+      "Rows affected": 1,
+      "Action": "Removed the second copy"
+    },
+    {
+      "Issue": "Product IDs used for more than one product name",
+      "Rows affected": 337,
+      "Action": "Kept; flagged. 32 IDs affected. Reports use Sub-Category, not product ID"
+    },
+    {
+      "Issue": "Ship date before order date",
+      "Rows affected": 0,
+      "Action": "None found"
+    },
+    {
+      "Issue": "Missing values in any column",
+      "Rows affected": 0,
+      "Action": "None found"
+    },
+    {
+      "Issue": "Sales of zero or less",
+      "Rows affected": 0,
+      "Action": "None found"
+    },
+    {
+      "Issue": "Discount outside 0\u201380%",
+      "Rows affected": 0,
+      "Action": "None found"
+    },
+    {
+      "Issue": "Customer names (personal data)",
+      "Rows affected": 9993,
+      "Action": "Dropped from the workbook; Customer ID is enough for analysis"
+    }
+  ]
+}

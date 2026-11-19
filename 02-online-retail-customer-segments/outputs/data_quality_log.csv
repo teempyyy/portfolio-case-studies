@@ -1,0 +1,10 @@
+Issue,Rows affected,Action
+Rows in the raw file,1067371,Starting point
+Exact duplicate rows,34335,Removed
+Bad-debt adjustment invoices (start with A),6,"Removed: accounting entries, not sales"
+Cancellation lines (invoice starts with C),19104,"Kept aside: reported as cancellations, not counted as sales"
+Non-cancelled lines with quantity or price of zero or less,6014,Removed: stock write-offs and free lines
+"Postage, fees, manual and test lines (non-product stock codes)",4572,"Removed from product sales: POST, DOT, M, C2, BANK CHARGES, AMAZONFEE, gift vouchers and similar"
+Sales lines with no customer ID,226761,Kept in total sales (13.1% of revenue); left out of customer analysis
+Customer IDs stored as decimals (13085.0),776579,Converted to whole numbers
+Clean sales lines,1003340,Used for the analysis
