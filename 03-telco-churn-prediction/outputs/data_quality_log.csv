@@ -1,0 +1,5 @@
+Issue,Rows affected,Action
+Rows in the raw file,7043,Starting point
+Duplicate customer IDs,0,None found
+TotalCharges blank,11,"All 11 have tenure [0]: brand-new customers not billed yet, so set to 0"
+Columns used as inputs,19,"3 numeric, 16 categories; customerID left out"

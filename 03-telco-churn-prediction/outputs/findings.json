@@ -1,0 +1,108 @@
+{
+  "customers": 7043,
+  "churn_rate_pct": 26.5,
+  "blank_total_charges": 11,
+  "train_customers": 5634,
+  "test_customers": 1409,
+  "chosen_approach": "Logistic regression",
+  "cv": [
+    {
+      "Approach": "Logistic regression",
+      "Brier (lower is better)": 0.1351,
+      "Brier spread across folds": 0.0052,
+      "ROC AUC": 0.8461,
+      "Average precision": 0.6615
+    },
+    {
+      "Approach": "Gradient-boosted trees",
+      "Brier (lower is better)": 0.1366,
+      "Brier spread across folds": 0.0058,
+      "ROC AUC": 0.843,
+      "Average precision": 0.6576
+    },
+    {
+      "Approach": "Lookup table (contract × tenure)",
+      "Brier (lower is better)": 0.1576,
+      "Brier spread across folds": 0.0014,
+      "ROC AUC": 0.7832,
+      "Average precision": 0.4878
+    }
+  ],
+  "test": {
+    "brier": 0.138,
+    "auc": 0.842,
+    "ap": 0.6337,
+    "base_rate": 0.2654
+  },
+  "lookup_test": {
+    "brier": 0.1547,
+    "auc": 0.7908
+  },
+  "test_leavers": 374,
+  "top20_customers": 282,
+  "top20_leavers": 186,
+  "caught_pct": {
+    "top10": 28.1,
+    "top20": 49.7,
+    "top30": 65.0,
+    "top50": 87.2
+  },
+  "lookup_caught_top20_pct": 44.7,
+  "top20_churn_rate_pct": 66.0,
+  "calibration_max_gap_pts": 6.9,
+  "top_drivers": [
+    {
+      "column": "tenure",
+      "auc_drop": 0.1719
+    },
+    {
+      "column": "InternetService",
+      "auc_drop": 0.039
+    },
+    {
+      "column": "Contract",
+      "auc_drop": 0.0349
+    },
+    {
+      "column": "MonthlyCharges",
+      "auc_drop": 0.0324
+    },
+    {
+      "column": "TotalCharges",
+      "auc_drop": 0.0146
+    }
+  ],
+  "churn_pct_by": {
+    "month_to_month": [
+      42.7,
+      3875
+    ],
+    "one_year": [
+      11.3,
+      1473
+    ],
+    "two_year": [
+      2.8,
+      1695
+    ],
+    "fiber": [
+      41.9,
+      3096
+    ],
+    "dsl": [
+      19.0,
+      2421
+    ],
+    "electronic_check": [
+      45.3,
+      2365
+    ],
+    "tenure_band": {
+      "0–6": 52.9,
+      "7–12": 35.9,
+      "13–24": 28.7,
+      "25–48": 20.4,
+      "49–72": 9.5
+    }
+  }
+}
